@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mycollection/TokoOnlineUI/page/home_page.dart';
 
 class TokoOnline extends StatefulWidget {
   @override
@@ -69,6 +70,12 @@ class _TokoOnlineState extends State<TokoOnline> {
                   child: InkWell(
                     onTap: () {
                       //nanti aja
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => BerandaToko(),
+                        ),
+                      );
                     },
                     child: Container(
                       height: 50.0,

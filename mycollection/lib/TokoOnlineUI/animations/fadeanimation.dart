@@ -3,6 +3,8 @@ import 'package:simple_animations/simple_animations.dart';
 import 'package:supercharged/supercharged.dart';
 
 class FadeAnimation extends StatelessWidget {
+  FadeAnimation(IconButton iconButton);
+
 
 
   // FadeAnimation(this.delay, this.child);
