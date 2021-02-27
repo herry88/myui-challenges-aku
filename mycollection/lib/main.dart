@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:mycollection/TokoOnlineUI/mainToko.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,6 +22,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  List<String> challengeList = [
+    "Toko Online",
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,11 +35,84 @@ class _HomePageState extends State<HomePage> {
             expandedHeight: 200.0,
             pinned: true,
             flexibleSpace: FlexibleSpaceBar(
-              title: Text('Challenges'),
-            
+              title: Text('HalamanDepan'),
+              background: Image.asset(
+                'assets/img/desert.jpg',
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          SliverPadding(
+            padding: EdgeInsets.only(
+              top: 10.0,
+            ),
+          ),
+          SliverFixedExtentList(
+            itemExtent: 60,
+            delegate: SliverChildBuilderDelegate(
+              (context, index) => SingleItem(challengeList[index], index),
+              childCount: challengeList.length,
+            ),
+          ),
+          SliverPadding(
+            padding: EdgeInsets.only(
+              bottom: 20.0,
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class SingleItem extends StatelessWidget {
+  String title;
+  int index;
+  // SingleItem(this.index, this.title,);
+  SingleItem(String title, int index) {
+    this.title = title;
+    this.index = index;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.fromLTRB(
+        10.0,
+        3.0,
+        10.0,
+        3.0,
+      ),
+      child: GestureDetector(
+        onTap: () {
+          if (index == 0) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => TokoOnline(),
+              ),
+            );
+          }
+        },
+        child: new Card(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(
+              10.0,
+            ),
+          ),
+          elevation: 3.0,
+          color: Colors.orangeAccent,
+          child: Center(
+            child: Text(
+              title,
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w600,
+                fontSize: 16.0,
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }
