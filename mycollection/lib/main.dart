@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:mycollection/TokoOnlineUI/mainToko.dart';
+import 'package:mycollection/clubhouse/clubmater.dart';
+import 'package:mycollection/foodApps/foodAppMaster.dart';
+import 'package:mycollection/onlinecourse/online_mainpage.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,7 +25,9 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List<String> challengeList = [
-    "Toko Online",
+    "Food Apps",
+    "ClubHouse",
+    "OnlineCourse",
   ];
   @override
   Widget build(BuildContext context) {
@@ -68,7 +72,7 @@ class _HomePageState extends State<HomePage> {
 class SingleItem extends StatelessWidget {
   String title;
   int index;
-  // SingleItem(this.index, this.title,);
+
   SingleItem(String title, int index) {
     this.title = title;
     this.index = index;
@@ -89,7 +93,22 @@ class SingleItem extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => TokoOnline(),
+                builder: (context) => FoodApp(),
+              ),
+            );
+          }
+          if (index == 1) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ClubHouseApps(),
+              ),
+            );
+          } if (index == 2) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => OnlineCourseMainPage(),
               ),
             );
           }
