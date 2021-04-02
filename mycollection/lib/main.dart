@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Ui Collection',
       home: HomePage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

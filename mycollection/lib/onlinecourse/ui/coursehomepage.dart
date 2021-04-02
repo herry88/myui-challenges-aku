@@ -144,31 +144,12 @@ class _CourseHomePageState extends State<CourseHomePage> {
                   fontSize: 20.0,
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(
-                  top: 16.0,
+              Text(
+                'Test',
+                style: TextStyle(
+                  color: Colors.white,
                 ),
-                child: ListView.separated(
-                    shrinkWrap: true,
-                    itemBuilder: (context, index) {
-                      return Padding(
-                        padding: const EdgeInsets.only(
-                          right: 24.0,
-                        ),
-                        child: Container(
-                          height:20.0,
-                          child:Row(
-                            children: [
-                              Expanded(child: Padding(padding: const EdgeInsets.all(8.0),),),
-
-                            ],
-                          ),
-                        ),
-                      );
-                    },
-                    separatorBuilder: separatorBuilder,
-                    itemCount: itemCount),
-              )
+              ),
             ],
           ),
         ),
