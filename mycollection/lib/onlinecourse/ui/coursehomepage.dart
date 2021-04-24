@@ -144,10 +144,9 @@ class _CourseHomePageState extends State<CourseHomePage> {
                   fontSize: 20.0,
                 ),
               ),
-              Text(
-                'Test',
-                style: TextStyle(
-                  color: Colors.white,
+              Padding(
+                padding: const EdgeInsets.only(
+                  top: 16.0,
                 ),
               ),
             ],

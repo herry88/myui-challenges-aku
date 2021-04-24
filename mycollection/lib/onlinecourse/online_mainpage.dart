@@ -80,9 +80,9 @@ class _OnlineCourseMainPageState extends State<OnlineCourseMainPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.account_balance_sharp,
+              Icons.person,
             ),
-            label: "Search",
+            label: "user",
           ),
         ],
       ),
