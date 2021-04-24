@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CourseHomePage extends StatefulWidget {
@@ -11,26 +12,21 @@ class _CourseHomePageState extends State<CourseHomePage> {
     return ListView(
       children: [
         Padding(
-          padding: const EdgeInsets.only(
-            left: 16.0,
-          ),
+          padding: const EdgeInsets.only(left: 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Class Preview',
+                "Class Previews",
                 style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
-                ),
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 16.0,
-                ),
+                padding: const EdgeInsets.symmetric(vertical: 16),
                 child: Container(
-                  height: 230.0,
+                  height: 230,
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
@@ -38,120 +34,161 @@ class _CourseHomePageState extends State<CourseHomePage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          new Container(
+                          Container(
                             height: 160,
                             width: 240,
                             decoration: BoxDecoration(
-                              color: Colors.redAccent,
-                              borderRadius: BorderRadius.circular(
-                                8.0,
-                              ),
-                              image: DecorationImage(
-                                image: NetworkImage(
-                                  "https://cdn.pixabay.com/photo/2015/01/08/18/24/children-593313_960_720.jpg",
-                                ),
-                                fit: BoxFit.cover,
-                              ),
-                            ),
+                                color: Colors.redAccent,
+                                borderRadius: BorderRadius.circular(8),
+                                image: DecorationImage(
+                                    image: NetworkImage(
+                                      "https://cdn.pixabay.com/photo/2015/01/08/18/24/children-593313_960_720.jpg",
+                                    ),
+                                    fit: BoxFit.cover)),
                           ),
                           SizedBox(
-                            height: 16.0,
+                            height: 16,
                           ),
                           Text(
-                            'Kelas A',
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
+                            "Dream Walker",
+                            style: TextStyle(color: Colors.white),
                           ),
                           Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 8.0),
+                            padding: const EdgeInsets.symmetric(vertical: 8),
                             child: Container(
-                              height: 1.0,
-                              width: 100.0,
-                              decoration: BoxDecoration(
-                                color: Colors.grey,
-                              ),
-                            ),
+                                height: 1,
+                                width: 100,
+                                decoration: BoxDecoration(color: Colors.grey)),
                           ),
                           Text(
-                            'Flutter Iseng UI',
-                            style: TextStyle(
-                              color: Colors.grey,
-                            ),
-                          ),
+                            "Flutter Live Coding",
+                            style: TextStyle(color: Colors.grey),
+                          )
                         ],
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(
-                          left: 16.0,
-                        ),
+                        padding: const EdgeInsets.only(left: 16),
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.min,
                           children: [
                             Container(
-                              height: 160.0,
-                              width: 240.0,
+                              height: 160,
+                              width: 240,
                               decoration: BoxDecoration(
                                 color: Colors.redAccent,
-                                borderRadius: BorderRadius.circular(
-                                  8.0,
-                                ),
+                                borderRadius: BorderRadius.circular(8),
                                 image: DecorationImage(
-                                  image: NetworkImage(
-                                    'https://cdn.pixabay.com/photo/2015/01/08/18/24/children-593313_960_720.jpg',
-                                  ),
-                                  fit: BoxFit.cover,
-                                ),
+                                    image: NetworkImage(
+                                      "https://cdn.pixabay.com/photo/2015/01/08/18/24/children-593313_960_720.jpg",
+                                    ),
+                                    fit: BoxFit.cover),
                               ),
                             ),
                             SizedBox(
-                              height: 16.0,
+                              height: 16,
                             ),
                             Text(
-                              'Kelas B',
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
+                              "Dream Walker",
+                              style: TextStyle(color: Colors.white),
                             ),
                             Padding(
-                              padding: const EdgeInsets.symmetric(
-                                vertical: 8.0,
-                              ),
+                              padding: const EdgeInsets.symmetric(vertical: 8),
                               child: Container(
-                                height: 1.0,
-                                width: 100.0,
-                                decoration: BoxDecoration(
-                                  color: Colors.grey,
-                                ),
-                              ),
+                                  height: 1,
+                                  width: 100,
+                                  decoration:
+                                      BoxDecoration(color: Colors.grey)),
                             ),
                             Text(
-                              'Iseng ',
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
-                            ),
+                              "Flutter Live Coding",
+                              style: TextStyle(color: Colors.grey),
+                            )
                           ],
                         ),
-                      ),
+                      )
                     ],
                   ),
                 ),
               ),
               Text(
-                'Popular Classes',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20.0,
-                ),
+                "Popular Classes",
+                style: TextStyle(color: Colors.white, fontSize: 20),
               ),
               Padding(
-                padding: const EdgeInsets.only(
-                  top: 16.0,
-                ),
-              ),
+                padding: const EdgeInsets.only(top: 16),
+                child: ListView.separated(
+                    shrinkWrap: true,
+                    itemBuilder: (context, index) {
+                      return Padding(
+                        padding: const EdgeInsets.only(right: 24),
+                        child: Container(
+                          height: 120,
+                          child: Row(
+                            children: [
+                              Expanded(
+                                  flex: 5,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        color: Colors.grey,
+                                        borderRadius: BorderRadius.circular(8),
+                                        image: DecorationImage(
+                                            image: NetworkImage(
+                                              "https://cdn.pixabay.com/photo/2015/01/08/18/24/children-593313_960_720.jpg",
+                                            ),
+                                            fit: BoxFit.cover),
+                                      ),
+                                    ),
+                                  )),
+                              Expanded(
+                                  flex: 7,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(12.0),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          "Live Coding",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              vertical: 24),
+                                          child: Text(
+                                            "Flutter Live Coding in YouTube",
+                                            style: TextStyle(
+                                                color: Colors.grey,
+                                                fontSize: 12),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  )),
+                            ],
+                          ),
+                        ),
+                      );
+                    },
+                    separatorBuilder: (context, index) {
+                      return Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                        child: Divider(
+                          color: Colors.grey,
+                        ),
+                      );
+                    },
+                    itemCount: 10),
+              )
             ],
           ),
-        ),
+        )
       ],
     );
   }
