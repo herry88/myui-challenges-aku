@@ -50,7 +50,7 @@ class _CourseHomePageState extends State<CourseHomePage> {
                             height: 16,
                           ),
                           Text(
-                            "Dream Walker",
+                            "Live Coding LKP",
                             style: TextStyle(color: Colors.white),
                           ),
                           Padding(
@@ -89,7 +89,7 @@ class _CourseHomePageState extends State<CourseHomePage> {
                               height: 16,
                             ),
                             Text(
-                              "Dream Walker",
+                              "Live Coding LKP",
                               style: TextStyle(color: Colors.white),
                             ),
                             Padding(
